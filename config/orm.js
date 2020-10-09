@@ -39,7 +39,7 @@ function printQuestionMarks(num) {
     return arr.toString();
   }
 
-  
+
 // Object for all our SQL statement functions.
 var orm = {
     all: function(table, cb) {
@@ -82,3 +82,6 @@ var orm = {
         });
     }
 }
+
+// Export the orm object so that it can be used for the model (burgers.js)
+module.exports = orm;
