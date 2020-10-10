@@ -1,12 +1,55 @@
 body {
-    background-color: lightyellow;
+    background-image: url("https://github.com/awebb8/eat-da-burger/blob/master/public/assets/images/burgers_background.jpg?raw=true");
+    background-color: rgb(133, 142, 95);
+    text-align: center;
+    justify-content: center;
 }
 
-h1 {
+.content {
+    max-width: 500px;
+    margin: auto;
+  }
+
+h2 {
     color: red;
+}
+
+.navbar {
+    background-color: rgb(254, 254, 207);
+    color: red;
+    padding: 30px;
     text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    border-bottom: 5px solid rgb(36, 180, 86);
+}
+
+.card {
+    background-color: rgb(254, 254, 207);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 100px;
 }
 
 .eat {
-    background-color: lightblue;
+    background-color: rgb(36, 180, 86);
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.submit_burger {
+    margin: 10px;
+    background-color: rgb(36, 180, 86);
+    border-radius: 10px;
+}
+
+.li {
+    list-style-type: none;
+}
+
+@media only screen and (min-width: 780px) {
+  .card {
+    margin-right: 100px;
+    margin-left: 100px;
+  }
 }
