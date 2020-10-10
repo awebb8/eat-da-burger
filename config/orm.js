@@ -12,12 +12,12 @@ var connection = require("../config/connection.js");
       var value = ob[key];
       // check to skip hidden properties
       if (Object.hasOwnProperty.call(ob, key)) {
-        // if string with spaces, add quotations (Lana Del Grey => 'Lana Del Grey')
+        // if string with spaces, add quotations (Black Bean Burger => 'Black Bean Burger')
         if (typeof value === "string" && value.indexOf(" ") >= 0) {
           value = "'" + value + "'";
         }
-        // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
-        // e.g. {sleepy: true} => ["sleepy=true"]
+        // e.g. {name: 'Black Bean Burger'} => ["name='Black Bean Burger'"]
+        // e.g. {devoured: true} => ["devoured=true"]
         arr.push(key + "=" + value);
       }
     }
@@ -38,13 +38,6 @@ var orm = {
 
     insertOne: function(table, cols, vals, cb) {
         var queryString = "INSERT INTO " + table + " (" + cols + ") VALUES ('" + vals + "') ";
-
-        // queryString += " (";
-        // queryString += cols.toString();
-        // queryString += ") ";
-        // queryString += "VALUES (";
-        // queryString += vals;
-        // queryString += ") ";
 
         console.log(queryString);
         connection.query(queryString, function(err, result) {
