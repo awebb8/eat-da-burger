@@ -1,7 +1,5 @@
-<h1>Eat-Da-Burger!</h1>
-
 <h2>Burgers available to eat:</h2>
-<ul>
+<ul class="li">
     {{#each burgers}}
 
         {{#unless this.devoured}}
@@ -12,13 +10,15 @@
 </ul>
 
 <h2>Burgers that have been eaten:</h2>
-<ul>
+<ul class="li">
     {{#each burgers}}
         {{#if this.devoured}}
             {{> burger-block devoured=true}}
         {{/if}}
     {{/each}}
 </ul>
+
+<br>
 
 <h2>Add a burger to the menu</h2>
 
@@ -29,5 +29,5 @@
     <input type="text" id="burger" name="name">
   </div>
 
-  <button type="submit">Add Burger</button>
+  <button type="submit" class="submit_burger">Add Burger</button>
 </form>
